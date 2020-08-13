@@ -1,0 +1,38 @@
+{% if page.title != "Home" %}
+  {% if page.lang == "en" %}{% include openinghours-alert.html %}{% endif %}
+  {% if page.lang == "zh" %}{% include zh/openinghours-alert.html %}{% endif %}
+{% endif %}
+
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__item footer__address">
+      <p class="footer__headline">{{ site.data.translations.[page.lang].['address'] }}</p>
+      <p class="footer__content">{{ site.data.translations.[page.lang].['addressdetails'] }}</p>
+    </div>
+    <div class="footer__item footer__openinghours">
+      <p class="footer__headline">{{ site.data.translations.[page.lang].['openinghours'] }}</p>
+      <p class="footer__content">{{ site.data.translations.[page.lang].['openingdetails'] }}</p>
+    </div>
+    <break></break>
+    <div class="footer__item footer__contact">
+      <p class="footer__headline">{{ site.data.translations.[page.lang].['contact'] }}</p>
+      <p class="footer__content">{{ site.data.translations.[page.lang].['telephone'] }}</p>
+      <p class="footer__content"><a href="mailto:info@cafezarah.com">{{ site.data.translations.[page.lang].['email'] }}</a></p>
+    </div>
+    <div class="footer__item footer__socialmedia">
+      <p class="footer__headline">{{ site.data.translations.[page.lang].['socialmedia'] }}</p>
+      <p class="footer__content__socialmedia">
+        <a href="https://www.facebook.com/cafezarah/" target="_blank"><i class="fab fa-facebook footer-socialmedia"></i></a>
+
+        <a href="https://www.instagram.com/zarah_beijing/" target="_blank"><i class="fab fa-instagram footer-socialmedia"></i></a>
+
+        <a href="javascript:void(0);" class="icon" onclick="toggleInquieryFormWechat()"><i class="fab fa-weixin footer-socialmedia"></i></a>
+
+        <a href="https://podcasts.apple.com/cn/podcast/zarah-music/id1494156908" target="_blank"> <i class="fas fa-podcast footer-socialmedia"></i></a>
+      </p>
+    </div>
+  </div>
+</footer>
+<div class="footer__copyright">
+  <a href="{% if page.lang == "zh" %}/zh/{% endif %}{{ site.data.navigation[0].link }}"><p>© Cafe Zarah 2020</p></a>
+</div>

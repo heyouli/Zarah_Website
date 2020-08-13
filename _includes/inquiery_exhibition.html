@@ -1,0 +1,29 @@
+<div id="inquiery_form__overlay_exhibitions">
+  <a href="javascript:void(0);" class="close-overlay" onclick="toggleInquieryFormExhibitions()"></a>
+  <div class="header__navigation__logo header__navigation__logo--default">
+    <a href="{{ '/' | absolute_url }}">
+      <img src="../assets/images/Zarahlogo-grey.png" width="50" alt="Logo">
+    </a>
+  </div>
+
+  <div class="main_overlay">
+    <div class="overlay_header">
+      <p class="overlay__title__copy">Photo Exhibition inquiery</p>
+      <p class="introduction__copy">Please give us as many details as possible.</p>
+    </div>
+    <div class="inquiery-form">
+      <form id="inquiery" action="" method="post">
+        <label for="name">Your name*</label>
+        <input id="name" tabindex="6" required>
+        <label for="phone">Your phone number</label>
+        <input id="phone" type="tel" tabindex="7">
+        <label for="email">Your email address*</label>
+        <input id="email" type="email" tabindex="8" required>
+        <label for="details">Message*</label>
+        <p class="hint">Please tell us something about you and your planned photo exhibition and send us a link to your photoprojects.</p>
+        <textarea id="details" tabindex="5" required></textarea>
+        <button class="button--primary" name="submit" type="submit" id="inquiery-submit" data-submit="...Sending">Send inquiery</button>
+       </form>
+    </div>
+  </div>
+</div>

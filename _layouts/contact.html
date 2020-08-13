@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<!-- Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+
+{% include header_overview.html %}
+
+<div class="title">
+  <img class="title__img" src="../assets/images/Contact.zarah.JPG" alt="header" style="width:100%;">
+  <h1 class="title__copy">{{ page.title_copy }}</h1>
+</div>
+
+<main class="about-content">
+  <div class="introduction">
+    <p class="introduction__copy">
+      {{ page.introduction_copy }}
+    </p>
+  </div>
+  <div class="contact-information">
+    <h2>{{ page.contactinformation_headline}}</h2>
+    <div class="contact-information__address">
+      <p>
+        {{ page.contactinformation_copy}}
+      </p>
+      <p>
+        {{ page.email}}
+      </p>
+      <p class="footer__content__socialmedia">
+        <a href="https://www.facebook.com/cafezarah/" target="_blank"><i class="fab fa-facebook footer-socialmedia"></i></a>
+
+        <a href="https://www.instagram.com/zarah_beijing/" target="_blank"><i class="fab fa-instagram footer-socialmedia"></i></a>
+
+        <a href="javascript:void(0);" class="icon" onclick="toggleInquieryFormWechat()"><i class="fab fa-weixin footer-socialmedia"></i></a>
+
+        <a href="https://podcasts.apple.com/cn/podcast/zarah-music/id1494156908" target="_blank"> <i class="fas fa-podcast footer-socialmedia"></i></a>
+
+      </p>
+    </div>
+    <div class="contact-information__map" id="mapid">
+    </div>
+  </div>
+  <div class="contact-form">
+    <h2>{{ page.form_headline }}</h2>
+    <form id="contact" method="POST" action="https://formspree.io/julia@cafezarah.com">
+      <label for="name" class="first_label">{{ page.form_label_name }}</label>
+      <input id="name" type="name" name="name" placeholder="Your name" tabindex="1" required>
+      <label for="email">{{ page.form_label_email }}</label>
+      <input id="email" type="email" name="email" placeholder="Your email" tabindex="2" required>
+      <label for="message">{{ page.form_label_message }}</label>
+      <textarea id="message" tabindex="5" required></textarea>
+      <button class="button--primary" name="submit" type="submit" id="contact-submit"
+        data-submit="...Sending">{{ page.form_label_submit }}</button>
+    </form>
+  </div>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>

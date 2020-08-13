@@ -1,0 +1,28 @@
+{% include localise %}
+
+<header class="header header--homepage">
+  <div class="header__stage">
+    <div class="active header__stage__img header__stage__img1" alt="header" style="width:100%;">
+    </div>
+    <div class="header__stage__img header__stage__img2 fade" >
+    </div>
+    <div class="header__stage__img header__stage__img3 fade" >
+    </div>
+    <div class="header__stage__img header__stage__img4 fade" >
+    </div>
+    <div class="header__stage__img header__stage__img5 fade" >
+    </div>
+    <div class="header__stage__img header__stage__img6 fade" >
+    </div>
+  </div>
+
+  <nav class="header__navigation">
+    <div class="header__navigation__logo header__navigation__logo--homepage">
+      <a href="{% if page.lang == "zh" %}/zh/{% endif %}{{ site.data.navigation[0].link }}">
+        <img src="../assets/images/Zarah.Logo.jpg" width="89" alt="Logo">
+      </a>
+    </div>
+    {% include navigation.html %}
+  </nav>
+  {% include openinghours-alert.html %}
+</header>

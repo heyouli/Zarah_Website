@@ -1,0 +1,13 @@
+{% include localise %}
+
+<header class="header header--overview">
+  <nav class="header__navigation">
+    <div class="header__navigation__logo header__navigation__logo--default">
+      <a href="{% if page.lang == "zh" %}/zh{% endif %}/{{ site.data.navigation[0].link }}">
+        <img src="{% if page.lang == "zh" %}../{% endif %}../../assets/images/Zarahlogo-grey.png" width="50" alt="Logo">
+      </a>
+    </div>
+    {% include navigation.html %}
+  </nav>
+
+</header>

@@ -1,0 +1,19 @@
+{% if page.lang %}
+  {% assign lang = page.lang %}
+{% else %}
+  {% assign lang = 'en' %}
+{% endif %}
+
+{% if lang == 'en' %}
+  {% assign alt_lang = 'zh' %}
+  {% assign alternate = '/zh' %}
+{% else %}
+  {% assign alt_lang = 'en' %}
+  {% assign alternate = '/' %}
+{% endif %}
+
+{% assign _alternate = site.documents | where: "slug", page.slug | where: "lang", alt_lang | where: "collection", page.collection | first %}
+
+{% if _alternate %}
+  {% assign alternate = _alternate.url %}
+{% endif %}

@@ -1,0 +1,38 @@
+collections:
+  events:
+    output: true
+    permalink: /:categories/:path/
+  pages:
+    output: true
+    permalink: /:categories/:path/
+  notes:
+    output: true
+    permalink: /:categories/:path/
+
+plugins:
+  - jekyll-redirect-from
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      lang: "en"
+  -
+    scope:
+      path: "_events/zh"
+    values:
+      lang: "zh"
+      permalink: /zh/:categories/:title/
+  -
+    scope:
+      path: "_pages/zh"
+    values:
+      lang: "zh"
+      permalink: /zh/:categories/:title/
+  -
+    scope:
+      path: "_notes/zh"
+    values:
+      lang: "zh"
+      permalink: /zh/:categories/:title/

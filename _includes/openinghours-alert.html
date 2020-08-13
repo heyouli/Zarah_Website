@@ -1,0 +1,11 @@
+<div class="alert">
+    <div class="timeslot-container">
+      {% assign notes = site.notes | where:"lang", page.lang %}
+      {% for note in site.notes %}
+      {% if note.lang == page.lang %}
+      <a href="{{ note.url }}">
+        <div class="closing-timeslot">{{ note.overviewtitle }}</div></a>
+      {% endif %}
+      {% endfor %}
+    </div>
+</div>

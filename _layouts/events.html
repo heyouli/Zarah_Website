@@ -1,0 +1,93 @@
+---
+layout: default
+---
+{% include header_overview.html %}
+
+<div class="title">
+  <img class="title__img" src="../assets/images/Events_Zarah.jpg" alt="header" style="width:100%;">
+  <h1 class="title__copy">{{ page.title_copy }}</h1>
+</div>
+
+<main class="events-content">
+  <div class="introduction">
+    <p class="introduction__copy">
+      {{ page.introduction_copy }}
+    </p>
+  </div>
+
+  <div class="events">
+    <div class="events">
+    <h2>
+      {{ page.category1_headline }}
+    </h2>
+
+    {% assign events = site.events | where: "lang", page.lang %}
+
+    <div class="events-gallery">
+      {% for event in events %}
+        {% if event.category contains "Special" %}
+          <a href="{{ event.url }}">
+            <div class="events-gallery-container">
+              <div class="events-gallery-container-img">
+                <img class="events-gallery-container-img__image" src="{{ event.picture }}" />
+                <div class="events-gallery-container-img__date">{{ event.time }}</div>
+              </div>
+              <div class="events-gallery-container-text">
+                <div class="events-gallery-container-text__title">{{ event.title }}</div>
+                <div class="events-gallery-container-text__time">{{ event.time_2 }}</div>
+              </div>
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <h2>
+      {{ page.category2_headline }}
+    </h2>
+
+    <div class="events-gallery">
+      {% for event in events %}
+        {% if event.category contains "Exhibition" %}
+          <a href="{{ event.url }}">
+            <div class="events-gallery-container">
+              <div class="events-gallery-container-img">
+                <img class="events-gallery-container-img__image" src="{{ event.picture }}" />
+                <div class="events-gallery-container-img__date">{{ event.time }}</div>
+              </div>
+              <div class="events-gallery-container-text">
+                <div class="events-gallery-container-text__title">{{ event.title }}</div>
+                <div class="events-gallery-container-text__time">{{ event.time_2 }}</div>
+              </div>
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <h2>
+      {{ page.category3_headline }}
+    </h2>
+
+    <div class="events-gallery">
+      {% for event in events %}
+        {% if event.category contains "Regular" %}
+          <a href="{{ event.url }}">
+            <div class="events-gallery-container">
+              <div class="events-gallery-container-img">
+                <img class="events-gallery-container-img__image" src="{{ event.picture }}" />
+                <div class="events-gallery-container-img__date">{{ event.time }}</div>
+              </div>
+              <div class="events-gallery-container-text">
+                <div class="events-gallery-container-text__title">{{ event.title }}</div>
+                <div class="events-gallery-container-text__time">{{ event.time_2 }}</div>
+              </div>
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+
+</main>

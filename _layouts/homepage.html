@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+{% include header_homepage.html %}
+
+<main class="content">
+  <div class="introduction">
+    <!-- <h2>
+      {{ page.about_headline }}
+    </h2> -->
+    <p class="introduction__copy">
+      {{ page.introduction_copy }}
+    </p>
+    <button class="button--secondary"><a href="{% if page.lang == "zh" %}/zh{% endif %}/{{ site.data.navigation[1].link }}">{{ page.aboutus_cta }}</a></button>
+  </div>
+  <div class="events">
+    <h2>
+      {{ page.events_headline }}
+    </h2>
+    <div class="events-gallery">
+      {% assign events = site.events | where: "lang", page.lang %}
+      {% for event in events limit:4 %}
+        <a href="{{ event.url }}">
+          <div class="events-gallery-container">
+            <div class="events-gallery-container-img">
+              <img class="events-gallery-container-img__image" src="{{ event.picture }}" />
+              <div class="events-gallery-container-img__date">{{ event.time }}</div>
+              <div class="events-gallery-container-img__type">{{ event.type }}</div>
+            </div>
+            <div class="events-gallery-container-text">
+              <div class="events-gallery-container-text__title">{{ event.title }}</div>
+              <div class="events-gallery-container-text__time">{{ event.time_2 }}</div>
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+    <button class="button--secondary"><a
+        href="{% if page.lang == "zh" %}/zh{% endif %}/{{ site.data.navigation[2].link }}">{{ page.events_cta }}</a></button>
+  </div>
+  <div class="address">
+    <h2>
+      {{ page.address_headline }}
+    </h2>
+    <p>
+      {{ page.address_copy }}
+    </p>
+  </div>
+  <div class="openinghours">
+    <h2>
+      {{ page.openinghours_headline }}
+    </h2>
+    <p>
+      <span class="tab tab--large">{{ page.sun_thu }}</span>{{ page.sun_thu_times }}
+      </br>
+      <span class="tab tab--large">{{ page.fri_sat }}</span> {{ page.fri_sat_times }}
+      </br></br>
+      {{ page.openinghours_info }}
+    </p>
+    <button class="button--secondary"><a href="mailto:info@cafezarah.com">{% include t stg1='ctas' stg2='booktable' %}</a></button>
+  </div>
+  <div class="inquiry">
+    <h2>
+      {{ page.rentus_headline }}
+    </h2>
+    <div class="inquiry-container">
+      <div class="event-inquiry">
+        <p>{{ page.eventinquiery_copy }}</p>
+        <button class="button--secondary"><a href="javascript:void(0);" class="icon"
+            onclick="toggleInquieryFormEvents()">{{ page.eventinquiery_cta }}</a></button>
+      </div>
+      <div class="exhibition-inquiry">
+        <p>{{ page.exhibitioninquiery_copy }}</p>
+        <button class="button--secondary"><a href="javascript:void(0);" class="icon"
+            onclick="toggleInquieryFormExhibitions()">{{ page.exhibitioninquiery_cta }}</a></button>
+      </div>
+    </div>
+  </div>
+</main>

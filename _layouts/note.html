@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+{% include header_overview.html %}
+
+<main class="content">
+  <div class="alert-container">
+    <div class="button--back"><a href="{% if page.lang == "zh" %}/zh{% endif %}/{{ site.data.navigation.link }}"><i class="fas fa-angle-left"></i>{% include t stg1='ctas' stg2='back' %}</a></div>
+    <div class="events-content--type">{{ page.type }}</div>
+    <div class="events-content--title">{{ page.maintitle }}</div>
+    <div class="events-content--time">{{ page.subtitle }}</div>
+     <div class="alert-content">
+       {{ content }}
+       <div class="talert-image-container">
+        <div class="alert-container__image">
+          <img src="{{ page.picture }}" alt="page.title"/>
+        </div>
+     </div> 
+</main>

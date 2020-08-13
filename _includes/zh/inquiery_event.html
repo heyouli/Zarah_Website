@@ -1,0 +1,91 @@
+<div id="inquiery_form__overlay_events">
+  <a href="javascript:void(0);" class="close-overlay" onclick="toggleInquieryFormEvents()"></a>
+  <div class="header__navigation__logo header__navigation__logo--default">
+    <a href="{{ '/' | absolute_url }}">
+      <img src="../assets/images/Zarahlogo-grey.png" width="50" alt="Logo">
+    </a>
+  </div>
+
+  <div class="main_overlay">
+    <div class="overlay_header">
+      <p class="overlay__title__copy">活动咨询</p>
+      <p class="introduction__copy">请尽量提供信息</p>
+    </div>
+    <div class="inquiery-form">
+      <form id="inquiery" action="" method="post">
+        <label for="date">理想日期</label>
+        <input id="datepicker" tabindex="2" data-date>
+        <label for="time">理想时间</label>
+        <fieldset>
+          <select id="timefrom" default="">
+            <option value="10:00">10:00 am</option>
+            <option value="10:30">10.30 am</option>
+            <option value="11:00">11:00 am</option>
+            <option value="11:30">11.30 am</option>
+            <option value="12:00">12.00 pm</option>
+            <option value="12:30">12.30 pm</option>
+            <option value="01:00">01.00 pm</option>
+            <option value="01:30">01.30 pm</option>
+            <option value="02:00">02.00 pm</option>
+            <option value="02:30">02.30 pm</option>
+            <option value="03:00">03.00 pm</option>
+            <option value="03:30">03.30 pm</option>
+            <option value="04:00">04.00 pm</option>
+            <option value="04:30">04.30 pm</option>
+            <option value="05:00">05.00 pm</option>
+            <option value="05:30">05.30 pm</option>
+            <option value="06:00">06.00 pm</option>
+            <option value="06:30">06.30 pm</option>
+            <option value="07:00">07.00 pm</option>
+            <option value="07:30">07.30 pm</option>
+            <option value="08:00">08.00 pm</option>
+            <option value="08:30">08.30 pm</option>
+            <option value="09:00">09.00 pm</option>
+            <option value="09:30pm">09.30 pm</option>
+            <option value="10:00pm">10.00 pm</option>
+          </select>
+          <p>-</p>
+          <select id="timeto" default="">
+            <option value="10:00">10:00 am</option>
+            <option value="10:30">10.30 am</option>
+            <option value="11:00">11:00 am</option>
+            <option value="11:30">11.30 am</option>
+            <option value="12:00">12.00 pm</option>
+            <option value="12:30">12.30 pm</option>
+            <option value="01:00">01.00 pm</option>
+            <option value="01:30">01.30 pm</option>
+            <option value="02:00">02.00 pm</option>
+            <option value="02:30">02.30 pm</option>
+            <option value="03:00">03.00 pm</option>
+            <option value="03:30">03.30 pm</option>
+            <option value="04:00">04.00 pm</option>
+            <option value="04:30">04.30 pm</option>
+            <option value="05:00">05.00 pm</option>
+            <option value="05:30">05.30 pm</option>
+            <option value="06:00">06.00 pm</option>
+            <option value="06:30">06.30 pm</option>
+            <option value="07:00">07.00 pm</option>
+            <option value="07:30">07.30 pm</option>
+            <option value="08:00">08.00 pm</option>
+            <option value="08:30">08.30 pm</option>
+            <option value="09:00">09.00 pm</option>
+            <option value="09:30pm">09.30 pm</option>
+            <option value="10:00pm">10.00 pm</option>
+          </select>
+        </fieldset>
+        <label for="people">人数</label>
+        <input id="people" tabindex="4">
+        <label for="details">活动详细*</label>
+        <p class="hint">请您给我们你需要办的活动的信息 (原因，餐，特殊需求, ...).</p>
+        <textarea id="details" tabindex="5" required></textarea>
+        <label for="name">联系人*</label>
+        <input id="name" tabindex="6" required>
+        <label for="phone">联系电话号码</label>
+        <input id="phone" type="tel" tabindex="7">
+        <label for="email">电子邮件*</label>
+        <input id="email" type="email" tabindex="8" required>
+        <button class="button--primary" name="submit" type="submit" id="inquiery-submit" data-submit="...Sending">发送咨询</button>
+       </form>
+    </div>
+  </div>
+</div>

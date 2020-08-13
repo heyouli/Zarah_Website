@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="{{ site.lang }}">
+
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Web fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+
+    <!-- Pikaday -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+
+  </head>
+
+  {% if page.lang == "en" %}
+    {% include inquiery_event.html %}
+    {% include inquiery_exhibition.html %}
+    {% include inquiery_wechat.html %}
+  {% endif %}
+
+  {% if page.lang == "zh" %}
+    {% include zh/inquiery_event.html %}
+    {% include zh/inquiery_exhibition.html %}
+    {% include zh/inquiery_wechat.html %}
+  {% endif %}
+
+  <body>
+
+    <div class="container">
+      {{ content }}
+      {% include footer.html %}
+    </div>
+
+    <!-- ============================= -->
+    <!-- JavaScript below -->
+    <!-- ============================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="{{ base.url | prepend: site.url }}/assets/js/main.js"></script>
+    <script src="{{ base.url | prepend: site.url }}/assets/js/contact.js"></script>
+
+  </body>
+
+</html>

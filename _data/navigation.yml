@@ -1,0 +1,17 @@
+- name_en: Home
+  name_zh: 主页
+- name_en: About
+  name_zh: 关于
+  link: about
+- name_en: Events
+  name_zh: 活动
+  link: events
+- name_en: Rent us
+  name_zh: 租我们的场地
+  link: rentus
+- name_en: Music
+  name_zh: 音乐
+  link: music
+- name_en: Contact
+  name_zh: 联系
+  link: contact

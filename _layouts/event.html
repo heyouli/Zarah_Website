@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{% include header_detail.html %}
+
+<main class="content">
+  <div class="events-single-content">
+    <div class="button--back">
+      <a href="{% if page.lang == "zh" %}/zh{% endif %}/{{ site.data.navigation[2].link }}">
+        <i class="fas fa-angle-left"></i>{% include t stg1='ctas' stg2='backbutton' %}
+      </a>
+    </div>
+    <div class="event-detail-container">
+      <div class="event-content">
+        <div class="events-content--type">{{ page.type }}</div>
+        <div class="events-content--title">{{ page.title }}</div>
+        <div class="events-content--date">
+          <div>{{ page.time }}</div>
+        </div>
+        <div class="events-content--time">{{ page.time_2 }}</div>
+        {{ content }}
+          <button class="button--secondary"><a href="mailto:info@cafezarah.com">{% include t stg1='ctas' stg2='bookevent' %}</a></button>
+      </div>
+      <div class="event-image">
+        <img src="{{ page.picture_2 }}" alt="page.title" />
+      </div>
+    </div>
+  </div>
+</main>

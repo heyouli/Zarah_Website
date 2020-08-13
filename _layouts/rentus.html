@@ -1,0 +1,97 @@
+---
+layout: default
+---
+
+{% include header_overview.html %}
+
+<div class="title">
+  <img class="title__img" src="../assets/images/Rentus_Zarah.JPG" alt="header" style="width:100%;">
+  <h1 class="title__copy">{{ page.title_copy }}</h1>
+</div>
+
+<main class="content">
+  <div class="introduction">
+    <p class="introduction__copy">
+      {{ page.introduction_copy }}
+    </p>
+  </div>
+  <div class="venue">
+    <h2>{{ page.venue_headline }}</h2>
+    <p>
+      {{ page.venue_copy }}
+    </p>
+    <nav class="tab-menu">
+      <a class="tab-menu__text" href="#front-area" class="active tab-menu__first-item">{{ page.tabmenu_front }}</a>
+      <a class="tab-menu__text" href="#yard">{{ page.tabmenu_yard }}</a>
+      <a class="tab-menu__text" href="#back-area">{{ page.tabmenu_back }}</a>
+      <a class="tab-menu__text" href="#meeting-room">{{ page.tabmenu_meeting }}</a>
+      <a class="tab-menu__text" href="#terrace" class="tab-menu__last-item">{{ page.tabmenu_terrace }}</a>
+    </nav>
+    <div id="front-area" class="text-image-container--50 active">
+      <div class="text-image-container--50__image">
+        <img src="../assets/images/Zarah_frontarea.jpg" alt="cafe">
+      </div>
+      <div class="text-image-container--50__text">
+        <p>
+          {{ page.front_copy }}
+        </p>
+      </div>
+    </div>
+    <div id="yard" class="text-image-container--50">
+      <div class="text-image-container--50__image">
+        <img src="../assets/images/Zarah_yard.jpg" alt="cafe">
+      </div>
+      <div class="text-image-container--50__text">
+        <p>
+          {{ page.yard_copy }}
+        </p>
+      </div>
+    </div>
+    <div id="back-area" class="text-image-container--50">
+      <div class="text-image-container--50__image">
+        <img src="../assets/images/Zarah_hallway.jpg" alt="cafe">
+      </div>
+      <div class="text-image-container--50__text">
+        <p>
+          {{ page.back_copy }}
+        </p>
+      </div>
+    </div>
+    <div id="meeting-room" class="text-image-container--50">
+      <div class="text-image-container--50__image">
+        <img src="../assets/images/Zarah_meetingroom.jpg" alt="cafe">
+      </div>
+      <div class="text-image-container--50__text">
+        <p>
+          {{ page.meeting_copy }}
+        </p>
+      </div>
+    </div>
+    <div id="terrace" class="text-image-container--50">
+      <div class="text-image-container--50__image">
+        <img src="../assets/images/Zarah_terrace.jpg" alt="cafe">
+      </div>
+      <div class="text-image-container--50__text">
+        <p>
+          {{ page.terrace_copy }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="teaser teaser--left">
+    <h2>
+      {{ page.eventinquiery_headline }}
+    </h2>
+    <p>{{ page.eventinquiery_copy }}</p>
+    <button class="button--secondary"><a href="javascript:void(0);" class="icon"
+        onclick="toggleInquieryFormEvents()">{{ page.eventinquiery_cta }}</a></button>
+  </div>
+  <div class="teaser teaser--right">
+    <h2>
+      {{ page.exhibitioninquiery_headline }}
+    </h2>
+    <p>{{ page.exhibitioninquiery_copy }}</p>
+    <button class="button--secondary"><a href="javascript:void(0);" class="icon"
+        onclick="toggleInquieryFormExhibitions()">{{ page.exhibitioninquiery_cta }}</a></button>
+  </div>
+</main>

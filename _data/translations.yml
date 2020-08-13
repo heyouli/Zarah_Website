@@ -1,0 +1,33 @@
+en:
+  address: "Address"
+  openinghours: "Opening Hours"
+  contact: "Contact"
+  socialmedia: "Follow us"
+  wechat: "Wechat"
+  addressdetails: "Guloudongdajie No.46</br>Dongcheng District</br>100009 Beijing</br>P.R.China"
+  openingdetails: "Sun – Thu</span></span></span> 10am - 12am</br>Fri + Sat</span> 10am – 1am"
+  telephone: "+86-(0)10-84039807"
+  email: "info@cafezarah.com"
+  note: "News："
+  ctas:
+    bookevent: "Book event"
+    backbutton: "Back to overview"
+    booktable: "Book a table"
+    back: "Back"
+
+zh:
+  address: "地址"
+  openinghours: "营业时间"
+  contact: "联系"
+  socialmedia: "关注我们"
+  wechat: "微信"
+  addressdetails: "中国北京市</br>东城区鼓楼东大街46号</br>邮编100009"
+  openingdetails: "周日之周四</span> 10am – 12am</br>周五和周六</span> 10am – 1am"
+  telephone: "+86-(0)10-84039807"
+  email: "info@cafezarah.com"
+  note: "信息："
+  ctas:
+    bookevent: "定此活动"
+    backbutton: "回到概述"
+    booktable: "定位置"
+    back: "返回"

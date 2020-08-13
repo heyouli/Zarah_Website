@@ -1,0 +1,80 @@
+---
+layout: default
+title: About
+lang-ref: about
+permalink: /about
+---
+{% include header_overview.html %}
+
+<div class="title">
+  <img class="title__img" src="../assets/images/About_Zarah.jpg" alt="header" style="width:100%;">
+  <h1 class="title__copy">{{ page.title_copy }}</h1>
+</div>
+
+<main class="content">
+  <div class="introduction">
+    <p class="introduction__copy">
+      {{ page.intro_copy }}
+    </p>
+  </div>
+  <div class="text-image-area">
+    <div class="text-image-container first-container">
+      <div class="text-image-container__text">
+        <h2>{{ page.paragraph1_headline }}</h2>
+        <p>
+          {{ page.paragraph1_copy }}
+        </p>
+      </div>
+      <div class="text-image-container__image">
+        <img src="../assets/images/cafe.jpg" alt="cafe">
+      </div>
+    </div>
+    <div class="text-image-container text-image-container--image-left">
+      <div class="text-image-container__text">
+        <h2>{{ page.paragraph2_headline }}</h2>
+        <p>
+          {{ page.paragraph2_copy }}
+        </p>
+      </div>
+      <div class="text-image-container__image text-image-container__image--left">
+        <img src="../assets/images/zarah_events.jpg" alt="bar">
+      </div>
+    </div>
+    <div class="text-image-container">
+      <div class="text-image-container__text">
+        <h2>{{ page.paragraph3_headline }}</h2>
+        <p>
+          {{ page.paragraph3_copy }}
+          <a href="javascript:void(0);" class="icon" onclick="toggleInquieryFormEvents()">
+            {{ page.paragraph3_cta_eventinquiery }}
+          </a>
+          {{ page.paragraph3_cta_connector }}
+          <a href="javascript:void(0);" class="icon" onclick="toggleInquieryFormExhibitions()">
+            {{ page.paragraph3_cta_exhibitioninquiery }}
+          </a>
+          {{ page.paragraph3_copy_closing }}
+        </p>
+      </div>
+      <div class="text-image-container__image">
+        <img src="../assets/images/event_space.jpg" alt="event-space">
+      </div>
+    </div>
+  </div>
+
+  <div class="slider">
+    <div class="slide active image1" id="slide1">
+    </div>
+    <div class="slide image2" id="slide2">
+    </div>
+    <div class="slide image3" id="slide3">
+    </div>
+    <div class="slider_nav">
+      <a class="slideBtn active" data-slide-target="1" href="#slide1">•</a>
+      <a class="slideBtn" data-slide-target="2" href="#slide2">•</a>
+      <a class="slideBtn" data-slide-target="3" href="#slide3">•</a>
+    </div>
+    <a class="secondary_nav backBtn"><i></i></a>
+    <a class="secondary_nav fwdBtn"><i></i></a>
+  </div>
+
+</main>

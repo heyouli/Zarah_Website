@@ -1,0 +1,7 @@
+{% if site.data.translations[lang][include.stg1] && if site.data.translations[lang][include.stg2]%}
+  {{ site.data.translations[lang][include.stg1][include.stg2] }}
+{% elsif site.data.translations[lang][include.stg1] %}
+  {{ site.data.translations[lang][include.stg1] }}
+{% else %}
+  {{ include.stg1 }}
+{% endif %}
